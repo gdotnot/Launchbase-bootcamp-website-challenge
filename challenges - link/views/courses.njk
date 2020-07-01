@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="/styles/courses.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock styles %}
+
+    {% block title %}
+        <title>Cursos</title>
+    {% endblock title %}
+
+
+    {% block content %}
+        <section class="cards">
+            {% for course in courses %}
+            <div class="card" id="{{course.id}}">
+                <div class="card-image-container">
+                    <span>{{course.number}}</span>
+                    <img src="{{course.image_path}}" alt="Logo GoStack">
+                </div>
+                <div class="card-content">
+                    <p>{{course.description}}</p>
+                </div>
+                <div class="card-info">
+                    <p>{{course.modules}}</p>
+                    <p class="card-price">{{course.price}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="/scripts/scripts.js"></script>
+    {% endblock scripts %}

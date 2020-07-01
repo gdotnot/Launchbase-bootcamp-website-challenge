@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+    {% block styles %}
+    <link rel="stylesheet" href="/styles/about.css">
+    {% endblock styles %}
+
+    {% block title %}
+    <title>Sobre</title>
+    {% endblock title %}
+
+        {% block content %}
+        <div id="wrapper">
+            <div class="image">
+                <div id="presentation">
+                    <img src="{{ about.image_url }}" alt="">
+                    <h2>{{ about.company}}</h2>
+                </div>
+                <div id=links>
+                    <ul class="lista-imagens">
+                        {% for icon in about.icons %}
+                        <li><a href="{{ icon.url }}" target="_blanck"><img src="{{ icon.image }}" alt="Icone {{ icon.name }}"></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+            <div class="info">
+                <h1>{{ about.title }}</h1>
+                <h2>{{ about.role }}</h2>
+                <p>{{ about.description }}</p>
+                <ul>
+                    {% for image in about.images %}
+                     <div class="technologies">
+                        <li><a href="{{ image.link }}" target="_blank"><img src="{{ image.image_url }}" alt="Imagem de {{ image.title }}"></a></li>
+                        <h3>{{ image.title }}</h3>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endblock content %}
