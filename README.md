@@ -54,5 +54,4 @@ Theres a two versions:
 * To run the server, use the command `npm start` into the main folder (challenge - link or challenge - modal).
 * Go to Google Chrome and type in url *localhost:5000*
 
-To run Foodfy front-end, it's necessary to navigate to the file folder and open html files with browser
 
