@@ -10,7 +10,7 @@ server.use(express.static("public"))
 server.set("view engine", "njk")
 
 nunjucks.configure("views", {
-    express:server,
+    express: server,
     noCache: true,
     autoescape: false
 })
@@ -29,4 +29,4 @@ server.get("/courses/:id", (req, res) => {
     return res.send(`O id fornecido na rota é: ${id}`);
 });
 
-server.listen(5000)
+server.listen(5300)

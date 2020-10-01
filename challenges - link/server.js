@@ -29,4 +29,4 @@ server.get("/courses/:id", (req, res) => {
     return res.redirect(`https://rocketseat.com.br/${id}`);
 });
 
-server.listen(5000)
+server.listen(5300)
